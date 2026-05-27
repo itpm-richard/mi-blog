@@ -5,10 +5,12 @@
 	list-style:none;
 	font-family:sans-serif;
 	}
-	
 body{
-	background:url(../img/background.jpg);
-	background-repeat:repeat;
+	background:url(../img/boliviaflag.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
 	}
 	
 /*-------------------------------*/	
@@ -18,9 +20,12 @@ body{
 header{
 	position:relative;
 	margin:auto;
-	width:1000px;
-	height:83px;
-	background:url(../img/cabezote.jpg);
+	width: 1200px;
+	height: 125px;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image:url(../img/bolivia-danzas.png);
 	}
 	
 #logo{
@@ -39,7 +44,7 @@ header{
 nav{
 	position:relative;
 	margin:auto;
-	width:1000px;
+	width:1200px;
 	height:45px;
 	border-bottom:1px solid #bcd1cb;
 	background:url(../img/nav.jpg);
@@ -67,14 +72,39 @@ nav ul li{
 /*-------------------------------*/	
 /*-------------------------------*/
 /*--SLIDE--*/
+/* Oculta el desbordamiento y fija el tamaño del carrusel */
+.contenedor-carrusel {
+  width: 100%;
+  max-width: 1200px; /* Ajusta este valor al tamaño que desees */
+  height: 301px;
+  margin: auto;
+  overflow: hidden;
+}
 
-#slide{
-	position:relative;
-	margin:auto;
-	width:1000px;
-	height:301px;
-	}
-	
+/* Alinea las 10 imágenes (5 originales + 5 duplicadas) en una fila horizontal */
+.carrusel-slide {
+  display: flex;
+  width: 300%; /* El doble de ancho para que quepan todas las imágenes */
+  height: 301px;
+  animation: deslizar 20s linear infinite; /* Tiempo total del ciclo y repetición infinita */
+}
+
+/* Ajusta las imágenes para que se distribuyan equitativamente */
+.carrusel-slide img {
+  width: 10%; /* 100% dividido entre 10 imágenes */
+  object-fit: cover;
+}
+
+/* Define la animación que mueve el contenedor de derecha a izquierda */
+@keyframes deslizar {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Mueve todo el bloque a la izquierda */
+  }
+}
+
 /*--FIN SLIDE--*/
 /*-------------------------------*/	
 /*-------------------------------*/
@@ -83,7 +113,7 @@ nav ul li{
 #botoneraSlide{
 	position:relative;
 	margin:auto;
-	width:1000px;
+	width:1200px;
 	height:26px;
 	background:url(../img/backBotonesSlide.jpg);
 	}
@@ -113,7 +143,7 @@ nav ul li{
 section#inicio{
 	position:relative;
 	margin:auto;
-	width:1000px;
+	width:1200px;
 	height:299px;
 	background:white;
 	}
@@ -150,7 +180,7 @@ section#inicio ul li img{
 section#quienesSomos{
 	position:relative;
 	margin:auto;
-	width:1000px;
+	width:1200px;
 	height:299px;
 	/*background:url(../img/quienesSomos.jpg);*/
 	background:white;
@@ -196,7 +226,7 @@ section#quienesSomos img{
 section#servicios{
 	position:relative;
 	margin:auto;
-	width:1000px;
+	width:1200px;
 	height:299px;
 	background:white;
 	}
@@ -271,7 +301,7 @@ section#servicios #cajaServicios ul#visor li p{
 section#contactenos{
 	position:relative;
 	margin:auto;
-	width:1000px;
+	width:1200px;
 	height:299px;
 	background:white;
 	}
@@ -346,7 +376,7 @@ section#contactenos form input#enviar{
 #bottom{
 	position:relative;
 	margin:auto;
-	width:1000px;
+	width:1200px;
 	height:190px;
 	background:url(../img/backBottom.jpg);
 	}
@@ -444,7 +474,7 @@ section#contactenos form input#enviar{
 footer{
 	position:relative;
 	margin:auto;
-	width:1000px;
+	width:1200px;
 	height:62px;
 	text-align:center;
 	color:white;
