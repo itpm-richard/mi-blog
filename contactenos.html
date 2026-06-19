@@ -1,134 +1,60 @@
 <!doctype html>
-<html>
+<html lang="es">
+
 <head>
-<meta charset="utf-8">
-
-<meta name="author" content="Tutoriales a tu alcance">
-<meta name="description" content="Acá se pone la descripción del sitio">
-<meta name="keywords" content="tutoriales, html, desarrollo web">
-
-<title>Curso de Maquetación Web</title>
-
-<link href="css/estilo.css" type="text/css" rel="stylesheet" media="">
-
-<link rel="icon" href="img/icono.png">
- 
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unidades Finales: Grid, Animación y Responsive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-
-	<!--CABEZOTE-->
-	<header>
-    
-    	<div id="logo">
-        	<img src="img/logotipo.png" width="100%" alt="logotipo Maquetación Web">
-        </div>
-    
+    <header class="cabecera">
+        <h1>Galería de Proyectos Tecnológicos</h1>
+        <p>Módulo CSS Avanzado - Licenciado. Felix Maldonado A.</p>
     </header>
-    <!--FIN CABEZOTE-->
-    
-    <!--BARRA DE NAVEGACIÓN-->
-    <nav>
-    
-    	<ul>
-        	<a href="index.html"><li>Inicio</li></a>
-            <a href="quienesSomos.html"><li>Quiénes Somos</li></a>
-            <a href="servicios.html"><li>Servicios</li></a>
-            <a href="contactenos.html"><li>Contáctenos</li></a>
-        </ul>
-    
-    </nav>
-    <!--FIN BARRA DE NAVEGACIÓN-->
-    
-    <!--SLIDE-->
-    <div id="slide">
-    
-    	<ul>
-        	<li><img src="img/slide.jpg" width="100%"></li>
-        </ul>
-    
-    </div>
-    <!--FIN SLIDE-->
-    
-    <!--BOTONERA SLIDE-->
-    <div id="botoneraSlide">
-    
-    	<ul>
-        	<li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-        
-    </div>
-    <!--FIN BOTONERA SLIDE-->
-    
-    <!--SECTION-->
-    <section id="contactenos">
-    	<form>
-        	<input type="text" placeholder="Nombre" id="nombre">
-            <input type="email" placeholder="Email" id="email">
-            <input type="text" placeholder="Asunto" id="asunto">
-            <textarea placeholder="Mensaje" rows="6" id="mensaje"></textarea>
-            <input type="submit" id="enviar" value="Enviar">
-        
-        </form>
-    	
-    </section>
-    <!--FIN SECTION-->
-    
-    <!--BOTTOM-->
-    <div id="bottom">
-    	<ul>
-        	<li>
-                <h1>Noticias</h1>
-                <ol>
-                	<li>Lorem ipsum color sit amet</li>
-                    <li>Lorem ipsum color sit amet</li>
-                    <li>Lorem ipsum color sit amet</li>
-                    <li>Lorem ipsum color sit amet</li>
-                </ol>
-            </li>
-            
-            <li>
-                <h1>Novedades</h1>
-                <ol>
-                	<li>Lorem ipsum color sit amet</li>
-                    <li>Lorem ipsum color sit amet</li>
-                    <li>Lorem ipsum color sit amet</li>
-                    <li>Lorem ipsum color sit amet</li>
-                </ol>
-            </li>
-            
-             <li>
-                <h1>Galería</h1>
-                <img>
-            </li>
-            
-             <li>
-                <h1>Redes Sociales</h1>
-                <ul>
-                	<li><a href="http://www.facebook.com" target="_blank"></a></li>
-                    <li><a href="http://www.google.com" target="_blank"></a></li>
-                    <li><a href="http://www.pinterest.com" target="_blank"></a></li>
-                    <li><a href="http://www.twitter.com" target="_blank"></a></li>
-                </ul>
-            </li>
-            
-        </ul>
-    
-    </div>
-    <!--FIN BOTTOM-->
-    
-    <!--FOOTER-->
-    <footer>
-    
-    	&copy; Sitio desarrollado para mostrar las diferentes danzas de Bolivia | Todos los derechos reservados
-        
-    </footer>
-    <!--FIN FOOTER-->
-
+    <main class="contenedor-principal">
+        <section class="grid-proyectos">
+            <div class="tarjeta">
+                <div class="icono"><img src="img/desarrollo-web-icono.png" alt="desarrollo-web-icono"></div>
+                <h3>Desarrollo Web</h3>
+                <p>Construcción de sitios interactivos con HTML, CSS y JS nativo.</p>
+            </div>
+            <div class="tarjeta">
+                <div class="icono"><img src="img/apps-moviles-icono.png" alt="apps-moviles-icono"></div>
+                <h3>Apps Móviles</h3>
+                <p>Diseño de interfaces intuitivas y fluidas para smartphones.</p>
+            </div>
+            <div class="tarjeta">
+                <div class="icono"><img src="img/bases-de-datos-icono.png" alt="bases-de-datos-icono"></div>
+                <h3>Base de Datos</h3>
+                <p>
+                    Modelado y administración estructurada de información institucional.
+                </p>
+            </div>
+            <div class="tarjeta">
+                <div class="icono"><img src="img/ia-icono.png" alt="ia-icono"></div>
+                <h3>Inteligencia Artificial</h3>
+                <p>
+                    Integración de asistentes y modelos para automatización de código.
+                </p>
+            </div>
+            <div class="tarjeta">
+                <div class="icono"><img src="img/ciberseguridad-icono.jpg" alt="ciberseguridad-icono"></div>
+                <h3>Ciberseguridad</h3>
+                <p>
+                    Para proteger equipos, redes, aplicaciones de software, sistemas críticos y datos de posibles amenazas digitales. 
+                </p>
+            </div>
+            <div class="tarjeta">
+                <div class="icono"><img src="img/cloud-computing-icono.png" alt="cloud-computing-icono"></div>
+                <h3>Cloud Computing</h3>
+                <p>
+                    Acceso bajo demanda a recursos informáticos.
+                </p>
+            </div>
+        </section>
+    </main>
 </body>
-
 </html>

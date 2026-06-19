@@ -1,0 +1,92 @@
+/* --- ESTILOS GENERALES --- */
+body {
+ font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+ background-color: #f1f5f9;
+ color: #1e293b;
+ padding: 20px;
+}
+.cabecera {
+ text-align: center;
+ margin-bottom: 40px;
+}
+/* ==========================================
+ CONTENIDO 3.9: ESTRUCTURA CON CSS GRID
+ ========================================== */
+.grid-proyectos {
+ display: grid;
+ /* Creamos 4 columnas exactamente iguales utilizando fracciones (fr) */
+ grid-template-columns: 1fr 1fr 1fr 1fr;
+ /* Espaciado de separación limpia entre las tarjetas */
+ gap: 25px;
+}
+/* Estilos base de las tarjetas hijas */
+.tarjeta {
+ background-color: #ffffff;
+ padding: 30px;
+ border-radius: 12px;
+ text-align: center;
+ border: 1px solid #e2e8f0;
+ box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+ /* ==========================================
+ CONTENIDO 3.10: ANIMACIÓN (TRANSICIÓN)
+ ========================================== */
+ /* Le indicamos a la tarjeta que cualquier cambio visual dure 0.3 segundos de forma
+suave */
+ transition:
+ transform 0.3s ease,
+ box-shadow 0.3s ease,
+ background-color 0.3s ease;
+}
+.tarjeta {
+ font-size: 40px;
+ margin-bottom: 15px;
+}
+.icono{
+    width: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.icono img{
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+.tarjeta h3 {
+ color: #005088; /* Azul institucional */
+ margin-bottom: 10px;
+}
+/* Efecto interactivo al pasar el cursor por encima de la tarjeta */
+.tarjeta:hover {
+ transform: translateY(-10px); /* Eleva la tarjeta sutilmente hacia arriba */
+ box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); /* Intensifica la sombra */
+ background-color: #f8fafc; /* Cambia ligeramente el tono de fondo */
+ cursor: pointer;
+ border-color: #11caa0;
+}
+/* ==========================================
+ CONTENIDO 3.11: RESPONSIVE DESIGN (MEDIA QUERIES)
+ ========================================== */
+/* CONFIGURACIÓN PARA TABLETS (Pantallas menores a 992px de ancho) */
+@media (max-width: 992px) {
+ .grid-proyectos {
+ /* Reducimos de 4 columnas a solo 2 columnas */
+ grid-template-columns: 1fr 1fr;
+ }
+}
+/* CONFIGURACIÓN PARA CELULARES (Pantallas menores a 600px de ancho) */
+@media (max-width: 600px) {
+ .grid-proyectos {
+ /* Reducimos la rejilla a 1 sola columna vertical */
+ grid-template-columns: 1fr;
+ gap: 15px; /* Achicamos la separación para aprovechar pantalla */
+ }
+ body {
+ padding: 10px; /* Reducimos el margen del cuerpo en móviles */
+ }
+} 
+@media (min-width: 1024px) and (max-width: 1439px){
+    .grid-proyectos{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
